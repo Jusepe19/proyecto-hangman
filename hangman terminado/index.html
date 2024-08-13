@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página del juego ahorcado sobre League of Legends">
+    <meta name="author" content="Byron Pastrana Porras Cesar Artavia Mora">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body> 
+    <header>
+        <h1>Hangman</h1>
+    </header>
+    <main>
+        <div class="imgtop">
+            <img src="img/logo league of legends.png" alt="logo de League of Legends" width="100%">
+        </div>
+        <div class="der">
+            <form name="contador">
+                <input type="button" id="new" value="Nueva Partida" onclick="funNuevaPartida()">
+                <br>
+                <label for="contWin">Ganadas:</label>
+                <br>
+                <input type="text" name="contWin" id="contWin" disabled>
+                <br>
+                <label for="contLose">Perdidas:</label>
+                <br>
+                <input type="text" name="contLose" id="contLose" disabled>
+            </form>
+        </div>
+        <div class="izq">
+            <div class="ins">
+                <h1>Instrucciones:</h1>
+                <p>JUGADORES: DOS O MÁS<br>
+                OBJETIVO: Adivinar una palabra en el menor número de intentos posibles.<br>
+                Primero se deben marcar tantas rayas como letras tenga la palabra pensada.<br>
+                Los jugadores tendrán que ir diciendo letras para formar la palabra.<br>
+                Se dibuja una horca y los jugadores van diciendo letras.<br>
+                Si aciertan, se escribe la letra en la raya que corresponda.<br>
+                Si fallan, se dibuja una parte del muñeco (cabeza, ojos, brazo…).<br>
+                Hay que conseguir adivinar la palabra antes de que se complete el cuerpo.<br>
+                ¡O TERMINARÁS AHORCADO!</p>
+            </div>
+            <hr>
+            <div class="ahorcado">
+                <div id="letrasjugar">
+                    <p id="letrasactuales"></p>
+                    <p id="mensaje"></p>
+                </div>
+                <div id="imagenahorcado">
+                    <img src="img/tronco.png" alt="tronco" id="tronco1" style="display:none;">
+                    <img src="img/tronco2.png" alt="tronco" id="tronco2" style="display:none;">
+                    <img src="img/soga.png" alt="soga" id="soga" style="display:none;">
+                    <img src="img/cabeza.png" alt="cabeza" id="cabeza" style="display:none;">
+                    <img src="img/cuerpo.png" alt="cuerpo" id="cuerpo" style="display:none;">
+                    <img src="img/brazoder.png" alt="brazo derecho" id="brazoder" style="display:none;">
+                    <img src="img/brazovi.png" alt="brazo izquierdo" id="brazoizq" style="display:none;">
+                    <img src="img/piernader.png" alt="pierna derecha" id="piernader" style="display:none;">
+                    <img src="img/piernaizq.png" alt="pierna izquierda" id="piernaizq" style="display:none;">
+                </div>
+            </div>
+            <hr>
+            <div id="tecla">
+                <form name="letras">
+                    <input type="button" value="A" onclick="funletra('A')">
+                    <input type="button" value="B" onclick="funletra('B')">
+                    <input type="button" value="C" onclick="funletra('C')">
+                    <input type="button" value="D" onclick="funletra('D')">
+                    <input type="button" value="E" onclick="funletra('E')">
+                    <input type="button" value="F" onclick="funletra('F')">
+                    <input type="button" value="G" onclick="funletra('G')">
+                    <input type="button" value="H" onclick="funletra('H')">
+                    <input type="button" value="I" onclick="funletra('I')">
+                    <input type="button" value="J" onclick="funletra('J')">
+                    <input type="button" value="K" onclick="funletra('K')">
+                    <input type="button" value="L" onclick="funletra('L')">
+                    <input type="button" value="M" onclick="funletra('M')">
+                    <input type="button" value="N" onclick="funletra('N')">
+                    <input type="button" value="Ñ" onclick="funletra('Ñ')">
+                    <input type="button" value="O" onclick="funletra('O')">
+                    <input type="button" value="P" onclick="funletra('P')">
+                    <input type="button" value="Q" onclick="funletra('Q')">
+                    <input type="button" value="R" onclick="funletra('R')">
+                    <input type="button" value="S" onclick="funletra('S')">
+                    <input type="button" value="T" onclick="funletra('T')">
+                    <input type="button" value="U" onclick="funletra('U')">
+                    <input type="button" value="V" onclick="funletra('V')">
+                    <input type="button" value="W" onclick="funletra('W')">
+                    <input type="button" value="X" onclick="funletra('X')">
+                    <input type="button" value="Y" onclick="funletra('Y')">
+                    <input type="button" value="Z" onclick="funletra('Z')">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <article class="foo1">
+            <p>Nombre: Byron Gerardo Pastrana Porras cel: 119150734</p>
+            <p>Nombre: Cesar Alberto Artavia Mora cel: 119180224</p>
+        </article>
+        <article class="foo2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.494149064145!2d-84.06325352412232!3d9.892737974869453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e2ffb8b2e5e3%3A0x7365dfce49ffa776!2sInstituto%20Nacional%20de%20Aprendizaje!5e0!3m2!1ses-419!2scr!4v1713423717048!5m2!1ses-419!2scr"
+                    width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+        <article class="foo3">
+            <h2>Redes</h2>
+            <ul>
+                <li><img src="img/facebook.PNG" alt="Face"></li>
+                <li><img src="img/instagram.PNG" alt="Insta"></li>
+                <li><img src="img/x.PNG" alt="X"></li>
+            </ul>
+        </article>
+    </footer>
+    <script src="js/code.js"></script>
+</body>
+
+</html>
